@@ -11,6 +11,22 @@
   </head>
 
   <body>
+    <ul class="nav">
+      <li class="nav-item">
+        <%= link_to "BBQ", root_path, class: "nav-link active" %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+
+
     <%= yield %>
   </body>
 </html>
