@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-light mb-4">
       <div class="container-fluid">
         <div class="navbar-nav ms-4">
-          <%= link_to "BBQ", root_path, class: "navbar-brand active" %>
+          <%= link_to t("app.name"), root_path, class: "navbar-brand active" %>
           <% if user_signed_in? %>
             <%= link_to "Профиль", current_user, class: "nav-link" %>
             <%= link_to "Выйти", destroy_user_session_path, data: { turbo_method: :delete }, class: "nav-link" %>
@@ -29,5 +29,9 @@
     <%= render "partials/form_notifications" %>
 
     <%= yield %>
+
+    <footer class="ms-4 me-4 mt-4">
+      <p>&copy; <%= t("app.company") %> <%= Time.now.year %></p>
+    </footer>
   </body>
 </html>
