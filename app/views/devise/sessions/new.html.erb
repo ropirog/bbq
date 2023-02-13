@@ -1,26 +1,26 @@
-<h2 class="pb-2 ms-4 me-4">Вход</h2>
+<h2 class="pb-2 ms-4 me-4"><%= t("views.entrance") %></h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
   <div class="pb-2 ms-4 me-4">
-    <%= f.email_field :email, placeholder: "Email", class: "rounded-1" %>
+    <%= f.email_field :email, placeholder: :email, class: "rounded-1" %>
     <i class="bi bi-envelope-fill"></i>
   </div>
 
   <div class="pb-2 ms-4 me-4">
-    <%= f.password_field :password, placeholder: "Пароль", class: "rounded-1" %>
+    <%= f.password_field :password, placeholder: t("activerecord.attributes.user.password"), class: "rounded-1" %>
     <i class="bi bi-lock-fill"></i>
   </div>
 
   <% if devise_mapping.rememberable? %>
     <div class="pb-2 ms-4 me-4">
       <%= f.check_box :remember_me, class: "form-check-input" %>
-      <%= f.label "Запомнить меня" %>
+      <%= f.label t("views.remember_me") %>
     </div>
   <% end %>
 
   <div class="pb-3 ms-4 me-4">
-    <%= f.submit "Войти", class: "btn btn-primary", data: { turbo: false } %>
+    <%= f.submit t("views.enter"), class: "btn btn-primary", data: { turbo: false } %>
   </div>
 <% end %>
 

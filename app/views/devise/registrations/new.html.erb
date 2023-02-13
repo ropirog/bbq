@@ -1,30 +1,31 @@
-<h2 class="pb-2 ms-4 me-4">Регистрация пользователя</h2>
+<h2 class="pb-2 ms-4 me-4"><%= t("views.sign_up") %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="pb-2 ms-4 me-4">
-    <%= f.email_field :email, placeholder: "Email", class: "rounded-1" %>
+    <%= f.email_field :email, placeholder: :email, class: "rounded-1" %>
     <i class="bi bi-envelope-fill"></i>
   </div>
 
   <div class="pb-2 ms-4 me-4">
-    <%= f.text_field :name, placeholder: "Имя", class: "rounded-1" %>
+    <%= f.text_field :name, placeholder: t("activerecord.attributes.user.name"), class: "rounded-1" %>
     <i class="bi bi-person-fill"></i>
   </div>
 
   <div class="pb-2 ms-4 me-4">
-    <%= f.password_field :password, placeholder: "Пароль", class: "rounded-1" %>
+    <%= f.password_field :password, placeholder: t("activerecord.attributes.user.password"), class: "rounded-1" %>
     <i class="bi bi-lock-fill"></i>
   </div>
 
   <div class="pb-2 ms-4 me-4">
-    <%= f.password_field :password_confirmation, placeholder: "Подтверждение пароля", class: "rounded-1" %>
+    <%= f.password_field :password_confirmation, placeholder: t("activerecord.attributes.user.password_confirmation"),
+                         class: "rounded-1" %>
     <i class="bi bi-lock-fill"></i>
   </div>
 
   <div class="pb-3 ms-4 me-4">
-    <%= f.submit "Готово", class: "btn btn-primary", data: { turbo: false } %>
+    <%= f.submit t("views.done"), class: "btn btn-primary", data: { turbo: false } %>
   </div>
 <% end %>
 
