@@ -1,15 +1,15 @@
-<% errors = model.errors %>
-
-<% if errors.any? %>
-  <div class="alert alert-danger">
-    <div class="lead buffer-bottom">
-      В вашей форме <%= errors.count %> ошибок
-    </div>
-
+<% if model.errors.any? %>
+  <div id="error_explanation" class="col-lg-8 alert alert-danger alert-dismissible fade show ms-4 me-4" role="alert">
+    <h4>
+      <%= I18n.t("errors.messages.not_saved",
+                 count: model.errors.count,
+                 resource: model.class.model_name.human.downcase) %>
+    </h4>
     <ul>
-      <% errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% model.errors.each do |message| %>
+        <li><%= message.full_message %></li>
       <% end %>
     </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   </div>
 <% end %>
