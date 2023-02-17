@@ -17,6 +17,7 @@ ru:
         description: "Описание"
         title: "Название"
       comment:
+        body: "Комментарий"
         comment: "Комментарий"
         user_name: "Ваше имя"
       subscription:
