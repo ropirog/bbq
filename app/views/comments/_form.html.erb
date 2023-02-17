@@ -2,7 +2,7 @@
   <%= render partial: "partials/form_errors", locals: {model: comment} %>
 
   <div class="mb-2 ms-4 me-4">
-    <%= f.label :body %>
+    <%= f.label :comment %>
     <%= f.text_area :body, class: "form-control" %>
   </div>
 
@@ -14,6 +14,6 @@
   <% end %>
 
   <div class="mt-3 ms-4 me-4">
-    <%= f.submit "Отправить", class: "btn btn-primary", data: { turbo: false } %>
+    <%= f.submit t("views.send"), class: "btn btn-primary", data: { turbo: false } %>
   </div>
 <% end %>
