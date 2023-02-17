@@ -43,7 +43,7 @@
         <h4><%= t("views.call") %>:</h4>
         <p><%= render partial: "users/user", object: @event.user %></p>
       </div>
-      <% if @event.subscribers.present? %>
+      <% if @event.subscriptions.present? %>
         <div>
           <h4><%= t("views.will_go") %>:</h4>
           <div>
