@@ -1,5 +1,5 @@
 <%= form_for [@event, comment] do |f| %>
-  <%= render partial: "partials/form_errors", locals: {model: comment} %>
+  <%= render partial: "devise/shared/error_messages", locals: { resource: comment } %>
 
   <div class="mb-2 ms-4 me-4">
     <%= f.label :comment %>

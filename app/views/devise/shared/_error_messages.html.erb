@@ -1,5 +1,5 @@
 <% if resource.errors.any? %>
-  <div id="error_explanation" class="col-lg-6 alert alert-danger alert-dismissible fade show ms-4 me-4" role="alert">
+  <div class="col-lg-8 alert alert-danger alert-dismissible fade show ms-4 me-4">
     <h4>
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,

@@ -1,6 +1,7 @@
 <div class="event">
   <div class="event-info row ms-4 me-4 rounded-4">
     <div class="col-md-12">
+
       <%= content_tag "div", "", class: "event-background",
                       style: "background-image: url(#{asset_path('event.jpg')})" %>
 
@@ -30,9 +31,7 @@
   <div class="row">
     <div class="col-md-8">
       <div class="event-comments buffer-top">
-
         <%= render partial: "comments/form", locals: { comment: @new_comment || @event.comments.build } %>
-
         <div class="buffer-both">
           <%= render partial: "comments/comment", collection: @event.comments.except(@new_comment) %>
         </div>

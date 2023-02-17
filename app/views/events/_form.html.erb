@@ -1,28 +1,28 @@
-<%= form_with model: event do |form| %>
-  <%= render partial: "partials/form_errors", locals: {model: event} %>
+<%= form_with model: event do |f| %>
+  <%= render partial: "devise/shared/error_messages", locals: { resource: event } %>
 
   <div class="mb-2 ms-4 me-4 col-4">
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "form-control" %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
 
   <div class="mb-2 ms-4 me-4 col-4">
-    <%= form.label :address %>
-    <%= form.text_field :address, class: "form-control" %>
+    <%= f.label :address %>
+    <%= f.text_field :address, class: "form-control" %>
   </div>
 
   <div class="mb-2 ms-4 me-4 col-4">
-    <%= form.label :datetime %>
-    <p><%= form.datetime_select :datetime, class: "form-control" %></p>
+    <%= f.label :datetime %>
+    <p><%= f.datetime_select :datetime, class: "form-control" %></p>
   </div>
 
   <div class="mb-3 ms-4 me-4 col-4">
-    <%= form.label :description %>
-    <%= form.text_area :description, class: "form-control" %>
+    <%= f.label :description %>
+    <%= f.text_area :description, class: "form-control" %>
   </div>
 
   <div class="ms-4 me-4">
-    <%= form.submit t("views.save"), class: "btn btn-primary" %>
+    <%= f.submit t("views.save"), class: "btn btn-primary" %>
     <%= t("views.or") %> <%= link_to t("views.back"), :back %>
   </div>
 <% end %>

@@ -1,8 +1,10 @@
 ru:
   activerecord:
     models:
-      user: "Пользователь"
+      comment: "Комментарий"
       event: "Событие"
+      subscription: "Подписка"
+      user: "Пользователь"
     attributes:
       user:
         email: "Email"

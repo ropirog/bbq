@@ -1,5 +1,5 @@
 <%= form_for [@event, subscription] do |f| %>
-  <%= render partial: "partials/form_errors", locals: {model: subscription} %>
+  <%= render partial: "devise/shared/error_messages", locals: { resource: subscription } %>
 
   <% unless user_signed_in? %>
     <div class="mb-2 me-4">
