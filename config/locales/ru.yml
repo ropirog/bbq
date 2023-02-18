@@ -3,28 +3,31 @@ ru:
     models:
       comment: "Комментарий"
       event: "Событие"
+      photo: "Фотография"
       subscription: "Подписка"
       user: "Пользователь"
     attributes:
+      comment:
+        body: "Комментарий"
+        comment: "Комментарий"
+        user_name: "Ваше имя"
+      event:
+        address: "Место проведения"
+        datetime: "Дата и время"
+        description: "Описание"
+        title: "Название"
+      photo:
+        photo: "Фотография"
+      subscription:
+        user: "Пользователь"
+        user_name: "Ваше имя"
+        user_email: "Ваш email"
       user:
         avatar: "Аватар"
         email: "Email"
         name: "Имя"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
-      event:
-        address: "Место проведения"
-        datetime: "Дата и время"
-        description: "Описание"
-        title: "Название"
-      comment:
-        body: "Комментарий"
-        comment: "Комментарий"
-        user_name: "Ваше имя"
-      subscription:
-        user: "Пользователь"
-        user_name: "Ваше имя"
-        user_email: "Ваш email"
   controllers:
     events:
       created: "Вы создали новое мероприятие"
@@ -40,7 +43,12 @@ ru:
       created: "Вы подписаны на это событие"
       destroyed: "Участник отписан"
       error: "Подписка/отписка не сработала"
+    photos:
+      error: "Что-то не так с фотографией"
+      created: "Вы добавили фотографию к событию"
+      destroyed: "Вы удалили фотографию"
   views:
+    add: "Добавил"
     are_you_sure_event: "Вы уверены, что хотите удалить мероприятие?"
     are_you_sure_user: "Вы уверены, что хотите удалить свой аккаунт?"
     back: "вернуться"

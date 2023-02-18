@@ -1,0 +1,12 @@
+<%= form_for [@event, photo], html: { multipart: true } do |f| %>
+  <%= render partial: "devise/shared/error_messages", locals: { resource: photo } %>
+
+  <div class="ms-4 me-4 mb-3">
+    <%= f.label :photo, class: "mb-2" %><br>
+    <%= f.file_field :photo %>
+  </div>
+
+  <div class="ms-4 me-4">
+    <%= f.submit "Загрузить", class: "btn btn-primary" %>
+  </div>
+<% end %>
