@@ -21,6 +21,7 @@ ru:
         comment: "Комментарий"
         user_name: "Ваше имя"
       subscription:
+        user: "Пользователь"
         user_name: "Ваше имя"
         user_email: "Ваш email"
   controllers:
