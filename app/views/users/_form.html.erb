@@ -11,10 +11,10 @@
     <%= f.text_field :email, class: "form-control" %>
   </div>
 
-  <div class="ms-4 me-4 mb-3">
+  <div class="ms-4 me-4 mb-3 col-4">
     <%= f.label :avatar %>
     <p><%= image_tag(user.avatar.thumb.url) if user.avatar? %></p>
-    <%= f.file_field :avatar %>
+    <input class="form-control" type="file">
   </div>
 
   <div class="ms-4 me-4">

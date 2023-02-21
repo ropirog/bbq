@@ -28,6 +28,9 @@ ru:
         name: "Имя"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
+  errors:
+    self_subscribe: " не может подписаться на своё событие"
+    use_registered_email: " уже зарегистрирован"
   controllers:
     events:
       created: "Вы создали новое мероприятие"

@@ -1,9 +1,9 @@
 <%= form_for [@event, photo], html: { multipart: true } do |f| %>
   <%= render partial: "devise/shared/error_messages", locals: { resource: photo } %>
 
-  <div class="ms-4 me-4 mb-3">
+  <div class="ms-4 me-4 mb-3 col-4">
     <%= f.label :photo, class: "mb-2" %><br>
-    <%= f.file_field :photo %>
+    <input class="form-control" type="file">
   </div>
 
   <div class="ms-4 me-4">
