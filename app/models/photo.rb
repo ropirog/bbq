@@ -16,6 +16,7 @@ class Photo < ApplicationRecord
   private
 
   def prohibition_to_add_photo
-    errors.add(:user, I18n.t("errors.prohibition_to_add_photo")) unless event.subscribers.include?(user)
+    errors.add(:user, I18n.t("errors.prohibition_to_add_photo")) unless event.subscribers.include?(user) ||
+      event.user == user
   end
 end

@@ -35,7 +35,7 @@
           <%= render partial: "photos/photo", collection: @event.photos.except(@new_photo) %>
         </div>
 
-        <% if @event.subscribers.include?(current_user) %>
+        <% if @event.subscribers.include?(current_user) || @event.user == current_user %>
           <div class="event-photo-form">
             <%= render partial: "photos/form", locals: { photo: @new_photo || @event.photos.build } %>
           </div>
