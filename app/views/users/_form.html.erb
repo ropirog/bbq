@@ -13,8 +13,8 @@
 
   <div class="ms-4 me-4 mb-3 col-4">
     <%= f.label :avatar %>
-    <p><%= image_tag(user.avatar.thumb.url) if user.avatar? %></p>
-    <input class="form-control" type="file">
+    <p><%= image_tag(user_avatar_thumb(user)) if user.avatar? %></p>
+    <%= f.file_field :avatar, class: "form-control", type: "file" %>
   </div>
 
   <div class="ms-4 me-4">
