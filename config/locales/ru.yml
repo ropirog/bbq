@@ -17,6 +17,7 @@ ru:
         description: "Описание"
         title: "Название"
       photo:
+        user: "Пользователь"
         photo: "Фотография"
       subscription:
         user: "Пользователь"
@@ -29,6 +30,7 @@ ru:
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
   errors:
+    prohibition_to_add_photo: " подпишитесь на событие, чтобы добавить фото"
     self_subscribe: " не может подписаться на своё событие"
     use_registered_email: " уже зарегистрирован"
   controllers:
