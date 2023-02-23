@@ -1,5 +1,17 @@
 ru:
   activerecord:
+    errors:
+      models:
+        photo:
+          attributes:
+            user:
+              prohibition_to_add_photo: " подпишитесь на событие, чтобы добавить фото"
+        subscription:
+          attributes:
+            user:
+              self_subscribe: " не может подписаться на своё событие"
+            user_email:
+              registered_email: " уже зарегистрирован"
     models:
       comment: "Комментарий"
       event: "Событие"
@@ -29,10 +41,6 @@ ru:
         name: "Имя"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
-  errors:
-    prohibition_to_add_photo: " подпишитесь на событие, чтобы добавить фото"
-    self_subscribe: " не может подписаться на своё событие"
-    use_registered_email: " уже зарегистрирован"
   controllers:
     events:
       created: "Вы создали новое мероприятие"

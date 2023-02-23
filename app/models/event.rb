@@ -1,14 +1,20 @@
 class Event < ApplicationRecord
   belongs_to :user
-  has_many :comments, dependent: :destroy
-  has_many :photos, dependent: :destroy
-  has_many :subscriptions, dependent: :destroy
+
+  with_options dependent: :destroy do
+    has_many :comments
+    has_many :photos
+    has_many :subscriptions
+  end
+
   has_many :subscribers, through: :subscriptions, source: :user
 
-  validates :user, presence: true
-  validates :title, presence: true, length: { maximum: 255 }
-  validates :address, presence: true
-  validates :datetime, presence: true
+  with_options presence: true do
+    validates :user
+    validates :title, length: { maximum: 255 }
+    validates :address
+    validates :datetime
+  end
 
   def visitors
     subscribers + [user]
