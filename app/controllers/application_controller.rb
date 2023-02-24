@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   helper_method :current_user_can_edit?
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:account_update, keys: [:avatar, :password, :password_confirmation, :current_password])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[ avatar password password_confirmation current_password ])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[ name ])
   end
 
   def current_user_can_edit?(model)
