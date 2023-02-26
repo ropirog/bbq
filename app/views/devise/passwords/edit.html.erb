@@ -2,6 +2,7 @@
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
+  <%= f.hidden_field :reset_password_token %>
 
   <div class="mb-2 ms-4 me-4 col-4">
     <%= f.label :password, t("views.new_password") %>
@@ -14,7 +15,7 @@
   </div>
 
   <div class="mb-3 ms-4 me-4">
-    <%= f.submit t("views.change"), class: "btn btn-primary" %>
+    <%= f.submit t("views.change"), class: "btn btn-primary", data: { turbo: false } %>
   </div>
 <% end %>
 
