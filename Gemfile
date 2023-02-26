@@ -11,6 +11,7 @@ gem "dotenv-rails", "~> 2.8"
 gem "fog-aws"
 gem "image_processing", ">= 1.2"
 gem "jsbundling-rails"
+gem "mailjet"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
@@ -26,4 +27,5 @@ end
 
 group :development do
   gem "web-console"
+  gem "letter_opener"
 end
