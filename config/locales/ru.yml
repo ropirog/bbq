@@ -69,6 +69,7 @@ ru:
     cancel: "Удалить мой аккаунт"
     change: "Изменить"
     change_password: "Изменить пароль"
+    confirm_new_password: "Повторите новый пароль"
     create_event: "Создать событие"
     current_password: "Текущий пароль"
     delete: "Удалить"

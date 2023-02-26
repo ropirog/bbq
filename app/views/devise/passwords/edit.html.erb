@@ -1,0 +1,21 @@
+<h2 class="pb-2 ms-4 me-4"><%= t("views.change_password") %></h2>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="mb-2 ms-4 me-4 col-4">
+    <%= f.label :password, t("views.new_password") %>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+
+  <div class="mb-3 ms-4 me-4 col-4">
+    <%= f.label :password_confirmation, t("views.confirm_new_password") %>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+  </div>
+
+  <div class="mb-3 ms-4 me-4">
+    <%= f.submit t("views.change"), class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
