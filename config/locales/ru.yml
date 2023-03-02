@@ -116,6 +116,7 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      link: "Ссылка"
     subscription:
       title: "Новая подписка"
       name: "Имя"
@@ -124,9 +125,11 @@ ru:
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      link: "Ссылка"
     photo:
       title: "Новое фото"
       author: "Автор"
       event: "Событие"
       datetime: "Состоится"
       owner: "Организатор"
+      link: "Ссылка"
