@@ -117,6 +117,7 @@ ru:
       datetime: "Состоится"
       owner: "Организатор"
       link: "Ссылка"
+      subject: "Новый комментарий @ %{event}"
     subscription:
       title: "Новая подписка"
       name: "Имя"
@@ -126,6 +127,7 @@ ru:
       datetime: "Состоится"
       owner: "Организатор"
       link: "Ссылка"
+      subject: "Новая подписка на %{event}"
     photo:
       title: "Новое фото"
       author: "Автор"
@@ -133,3 +135,4 @@ ru:
       datetime: "Состоится"
       owner: "Организатор"
       link: "Ссылка"
+      subject: "Новое фото @ %{event}"
