@@ -8,7 +8,7 @@
 <h3><%= @event.title %></h3>
 
 <%= t ".link" %>
-<h3><%= event_url(@event) %></h3>
+<h3><%= link_to @event.title, url_for(@event), class: "text-decoration-none" %></h3>
 
 <%= t ".datetime" %>
 <h4><%= l @event.datetime %></h4>
