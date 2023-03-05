@@ -16,9 +16,14 @@
     <p><%= f.datetime_select :datetime, class: "form-control" %></p>
   </div>
 
-  <div class="mb-3 ms-4 me-4 col-4">
+  <div class="mb-2 ms-4 me-4 col-4">
     <%= f.label :description %>
     <%= f.text_area :description, class: "form-control" %>
+  </div>
+
+  <div class="mb-3 ms-4 me-4 col-4">
+    <%= f.label :pincode %>
+    <%= f.text_field :pincode, class: "form-control" %>
   </div>
 
   <div class="ms-4 me-4">

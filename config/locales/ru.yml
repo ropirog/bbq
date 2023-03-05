@@ -28,6 +28,7 @@ ru:
         datetime: "Дата и время"
         description: "Описание"
         title: "Название"
+        pincode: "Пин-код доступа"
       photo:
         user: "Пользователь"
         photo: "Фотография"
@@ -46,6 +47,7 @@ ru:
       created: "Вы создали новое мероприятие"
       updated: "Вы обновили мероприятие"
       destroyed: "Вы удалили мероприятие"
+      wrong_pincode: "Неверный пин-код!"
     users:
       updated: "Вы обновили свой профиль"
     comments:
@@ -87,6 +89,7 @@ ru:
     or: "или"
     organized: "Организовал"
     profile: "Профиль"
+    pincode_access: "Доступ по пин-коду"
     remember_me: "Запомнить меня"
     save: "Сохранить"
     send: "Отправить"
