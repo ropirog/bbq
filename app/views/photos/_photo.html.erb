@@ -1,4 +1,7 @@
-<div class="event-photo buffer-both">
-  <%= link_to image_tag(photo.photo.variant(:thumb)), url_for(photo.photo) %>
-  <%= t("views.add") %> <%= render partial: "users/user", object: photo.user %>
-</div>
+<a href="<%= url_for(photo.photo.variant(:common)) %>"
+   data-gallery="example-gallery"
+   data-toggle="lightbox"
+   class="col-sm-2 photo-icon"
+   data-caption='<%= t("views.add") %> <%= render partial: "users/user", object: photo.user %>'>
+  <img src="<%= url_for(photo.photo.variant(:thumb)) %>" class="mb-3 ms-4 rounded-3">
+</a>
