@@ -12,7 +12,7 @@
           <div class="buffer-both"><%= event.address %></div>
         </div>
         <% event.visitors.each do |user| %>
-          <%= image_tag user_avatar_thumb(user), class: "img-icon mb-2", title: user.name %>
+          <%= image_tag user_avatar_thumb(user), class: "img-icon mb-2 ms-2", title: user.name %>
         <% end %>
       </div>
     </div>
