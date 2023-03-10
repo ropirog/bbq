@@ -4,7 +4,6 @@
 
       <%= content_tag "div", "", class: "event-background",
                       style: "background-image: url(#{event_photo(@event)})" %>
-
       <div class="event-info-inner row">
         <div class="col-md-6">
           <div class="event-description ms-3 me-3">
@@ -14,7 +13,6 @@
                                    "https://yandex.ru/maps/?text=#{@event.address}" %></small></h3>
             <p><%= @event.description %></p>
           </div>
-
           <% if current_user_can_edit?(@event) %>
             <div class="btn-group buffer-top ms-3 me-3 mb-3">
               <%= link_to t("views.change"), edit_event_path(@event), class: "btn btn-primary me-3 rounded-2" %>
@@ -65,7 +63,7 @@
         </div>
       </div>
       <% unless @event.user == current_user || @event.subscribers.include?(current_user) %>
-        <div>
+        <div class="mb-3">
           <h4 class="mb-3"><%= t("views.i_go") %>:</h4>
           <div>
             <%= render partial: "subscriptions/form", locals: {
@@ -73,6 +71,7 @@
           </div>
         </div>
       <% end %>
+      <div id="map" data-address="<%= @event.address %>" class="event-map"></div>
     </div>
   </div>
 </div>
